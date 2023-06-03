@@ -7,4 +7,5 @@ class Product(models.Model):
     weight_ton = models.PositiveSmallIntegerField() 
     
     def __str__(self):
-        return self.name_product
+        texto = "{0} ({1})"
+        return texto.format(self.name_product, self.weight_ton)
