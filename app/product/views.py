@@ -7,4 +7,9 @@ from .models import Product
 def home(request):
    # return HttpResponse("<h1>Hello world!</h1>")
    productList =Product.objects.all()
-   return render(request, "gestionProduct.html", {"product": productList})
+   data = {
+      'titulo': 'Gestión de productos',
+      'product': productList
+   }
+   # return render(request, "gestionProduct.html", {"product": productList})
+   return render(request, "gestionProduct.html", data)
