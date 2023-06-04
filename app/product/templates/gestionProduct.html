@@ -49,13 +49,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for p in product %}
+                            {% for p in object_list %}
                             <tr>
                                 <td>{{forloop.counter}}</td>
                                 <td>{{p.name_product}}</td>
                                 <td>{{p.weight_ton}}</td>
-                                <td><a href="edicionClient/{{c.id}}" class="btn btn-sm btn-block btn-info">Editar</a></td>
-                                <td><a href="eliminacionClient/{{c.id}}" class="btn btn-sm btn-block btn-danger">Eliminar</a></td>
+                                <td><a href="edicionProducto/{{c.id}}" class="btn btn-sm btn-block btn-info">Editar</a></td>
+                                <td><a href="eliminacionProducto/{{c.id}}" class="btn btn-sm btn-block btn-danger">Eliminar</a></td>
                             </tr>
                             {% endfor %}
                         </tbody>
